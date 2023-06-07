@@ -26,12 +26,3 @@ Route::get('redirect/call', function () {
 
     return $twiml;
 });
-
-Route::post('redirect/call', function () {
-    $twiml = new VoiceResponse();
-    $twiml->say("Gracias por llamar");
-    $twiml->say("Sera redireccionado a su llamada final");
-    $twiml->dial("+573118905560");
-
-    return $twiml;
-});
